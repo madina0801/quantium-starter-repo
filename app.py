@@ -12,5 +12,5 @@ data.drop(data[data['product'] != "pink morsel"].index, inplace = True)
 data['sales'] = data['quantity'].astype(str) + data['price']
 data.drop(data.columns[[0, 1, 2]], axis=1, inplace=True)
 
-data.to_csv('pink_morsel_data.csv')
+data.to_csv('pink_morsel_data.csv', index=False)
 print(data)
